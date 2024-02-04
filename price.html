@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Прайс-лист</title>
+</head>
+<body>
+    <dialog closeModal>
+        <div style="cursor: pointer;" class="abs closeModal">
+            <svg width="17" height="17" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="21" height="21" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_45_326" transform="scale(0.00195312)"/>
+            </pattern>
+            <image id="image0_45_326" width="512" height="512" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAIABJREFUeAHt3duPbVlVB+ARbLq9RB9E44sJiNFIiNH/whvEKPGCrUDTCOFIIpoYfTRG5ckY4p8giQ/wpKIPqMEoyM1roj4aE5UYBQXvdp9z7GmfTVfV2bVrr71uc4z5VXJSp/Zlrjm/Mfcav72qTp0IHwQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBwjsDXR8RbI+JXIuKDEfHJiPhURHwiIn4zIt4bEW+KiFeeM5jHECBAoKjAqyLizY/Oie3c2M6R7VzZzpnt3NnOoc9ExKuLrt+yigh8RUT8RET8WUQ8nPCnbfQfi4gv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dnl+jSsBn4mI79hkFQ5C4IZA+5mAjy+8sT8VEd944zi+JECAQGaBV0fExxY+V7bx2jnYB4HdBF72wu8IeHNE/P3Mzf3piHinn2DdrY4OTIDAugLtXNn+id7fzTxXtue/KSLaeD4IdCHwxRHxdET8XkS0H94753JXe9wfPHpRtOf7IECAQHWBJyPiLRHx4Yi4P+GdegtEAAAC50lEQVRc2X4l+xsjwrmy+g5Jvr72Hwi9PiJ+MSLeFxG//cJPqH4iItrvp/7AC7+l6j0R0f6Xwa9Jvk7TJ0CAwByBdq5sP8D3CxHx/oj40KNzZTtn/uqjc2j7l1evmHMQzyVAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgMAoAv8Haq9ftG+v/4EAAAAASUVORK5CYII="/>
+            </defs>
+            </svg>
+            </div>
+            <h1 class="standart" id="type0">СТАНДАРТНЫЙ</h1>
+            <hr>
+            <p  style="margin-top: 14px;" class="infoAb" id="type">Тип абонемента : СТАНДАРТНЫЙ</p>
+            <p class="infoAb" id="time">Время посещения : 8:00 - 22:00</p>
+            <p class="infoAb" id="price">Цена : 2400 руб.</p>
+            <div class="boxSelectTrain" style="cursor: pointer;">
+                <p id="text">Выбрать тренера</p>
+                <div class="open">
+                    <img src="assets/image 3.png" width="20" height="20" alt="arrow">
+                </div>
+                <ul class="myList dnone">
+                    <li onclick="select()">
+                        <p class="toSelect">Тренер тренер</p>
+                        <div class="arrow">
+                            <img src="assets/arrow.png" alt="">
+                        </div>
+                    </li>
+                    <li onclick="select()">
+                        <p class="toSelect">Тренер тренер</p>
+                        <div class="arrow">
+                            <img src="assets/arrow.png" alt="">
+                        </div>
+                    </li>
+                    <li onclick="select()">
+                        <p class="toSelect">Тренер тренер</p>
+                        <div class="arrow">
+                            <img src="assets/arrow.png" alt="">
+                        </div>
+                    </li>
+                    <li onclick="select()">
+                        <p class="toSelect">Тренер тренер</p>
+                        <div class="arrow">
+                            <img src="assets/arrow.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="blockGoToAb w-fit">
+                <a href="pay.html">
+                    Купить
+                </a>
+            </div>
+    </dialog>
+    <header class="jfsb">
+        <p class="ourPrice">Наш прайс-лист</p>
+        <a href="profile.html">
+            <img width="50" height="50" src="assets/image 11.png" alt="">
+        </a>
+    </header>
+    <main>
+      <div class="listSport">
+        <div class="item">
+            <div class="titleSport">
+                <p>СТАНДАРТНЫЙ</p>
+            </div>
+            <div class="price">
+                <p>2400руб/мес</p>
+            </div>
+            <div class="time">
+                <p class="timeActive">Время посещения :  8.00 - 22.00 </p>
+                <p class="timeActive">Тренажерный зал, сауна, зона отдыха</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="titleSport">
+                <p>СТУДЕНЧЕСКИЙ</p>
+            </div>
+            <div class="price">
+                <p>1500 руб/мес</p>
+            </div>
+            <div class="time">
+                <p class="timeActive">Время посещения :  8.00 - 22.00 </p>
+                <p class="timeActive">Тренажерный зал, сауна, зона отдыха</p>
+                <p class="timeActive">При наличии студ.билета очного обучения</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="titleSport">
+                <p>ДНЕВНОЙ</p>
+            </div>
+            <div class="price">
+                <p>1800 руб/мес</p>
+            </div>
+            <div class="time">
+                <p class="timeActive">Время посещения :  8.00 - 17.00</p>
+                <p class="timeActive">Тренажерный зал, сауна, зона отдыха</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="titleSport">
+                <p>УТРЕННИЙ</p>
+            </div>
+            <div class="price">
+                <p>1500руб/мес</p>
+            </div>
+            <div class="time">
+                <p class="timeActive">Время посещения :  8.00 - 14.00</p>
+                <p class="timeActive">Тренажерный зал, сауна, зона отдыха</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <div class="titleSport">
+                <p>ДЕТСКИЙ</p>
+            </div>
+            <div class="price">
+                <p>1400руб/мес</p>
+            </div>
+            <div class="time">
+                <p class="timeActive">Время посещения :  8.00 - 17.00 </p>
+                <p class="timeActive">Тренажерный зал, сауна, зона отдыха</p>
+                <p class="timeActive">Дети 14-18</p>
+            </div>
+            <div class="arrow">
+                <img src="assets/arrow.png" alt="">
+            </div>
+        </div>
+        
+      </div>
+    </main>
+    <footer>
+        <div class="back">
+            <a href="index.html">Назад</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+<script>
+// Получаем все элементы с классом .item
+const items = document.querySelectorAll('.item');
+
+// Проходимся по каждому элементу (Карточке с сертификатом) и качаем из него данные чтобы вывесим в модалочку
+// Получаем все элементы с классом .item
+// Проходимся по каждому элементу и добавляем обработчик события click
+items.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    // Получаем данные из текущего элемента
+    const title = this.querySelector('.titleSport p').textContent;
+    const price = this.querySelector('.price p').textContent;
+    const time1 = this.querySelector('.time p:nth-of-type(1)').textContent;
+    const time2 = this.querySelector('.time p:nth-of-type(2)').textContent;
+
+    // Теперь у вас есть доступ к данным текущего элемента для каждого клика
+    console.log(title, price, time1, time2);
+    console.log(time1)
+    document.getElementById('type0').innerText = title
+    document.getElementById('type').innerText = title
+    document.getElementById('time').innerText = time1
+    document.getElementById('price').innerText = price
+    localStorage.setItem('Название', title); 
+    localStorage.setItem('Цена', price); 
+    localStorage.setItem('Время', time1); 
+    localStorage.setItem('Набор', time2);
+  });
+});
+
+
+</script>
+</html>

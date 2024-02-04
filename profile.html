@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Личный кабинет - северное сияние</title>
+</head>
+<body>
+    <header>
+        <div class="pic">
+            <a href="index.html">
+            <img src="assets/Северное сияние.png" width="200" alt="">
+        </a>
+        </div>
+    </header>
+    <main>
+        <div class="prof">
+            <div class="rl">
+                <div class="r">
+                    <img width="70" height="70" src="assets/image 13.png" alt="">
+                </div>
+                <div class="l">
+                    <p class="surname" id="allData">Фамилия Имя Отчество</p>
+                    <p class="client">клиент</p>
+                    <p class="aboniment" id="title">Абонемент : СТАНДАРТНЫЙ</p>
+                </div>
+            </div>
+        </div>
+        <div class="private">
+            <h1>Личные данные</h1>
+            <div class="twoBlocksInp">
+                <div class="blockS">
+                    <div class="inputs">
+                        <p id="surname">Фамилия</p>
+                        <p id="name">Имя</p>
+                        <p id="otchestvo">Отчество</p>
+                        <p id="data">Дата рождения</p>
+
+                    </div>
+                </div>
+                <div class="blockS">
+                    <div class="inputs" style="align-items: flex-end">
+                        <p id="post">Почта</p>
+
+                        <a style="margin-right: 10px; margin-top: 2px;" href="edit-post.html">Изменить почту</a>
+                        <p id="password">Пароль</p>
+                        <a style="margin-right: 10px; margin-top: 2px;" href="edit-password.html">Изменить пароль</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="back">
+            <a href="price.html">Назад</a>
+        </div>
+    </footer>
+</body>
+<script>
+    //Штука выполняется при загрузке страницы
+    document.addEventListener("DOMContentLoaded", function() {
+  var data = JSON.parse(localStorage.getItem("userData"));
+  console.log(data)
+  // Установить текстовое содержимое элемента каждого элемента на основе данных из локального хранилища
+  //Короче тут мы в штуке, когда загружается страница, мы берем данные которые сохранили из полей ввода, и сертификатов в зал, и загружаем в профиль
+  document.getElementById('allData').textContent = `${localStorage.getItem('Фамилия')} ${localStorage.getItem('Имя')} ${localStorage.getItem('Отчество')}`
+  document.getElementById("surname").textContent = "Фамилия: " + localStorage.getItem('Фамилия');
+  document.getElementById("name").textContent = "Имя: " + localStorage.getItem('Имя');;
+  document.getElementById("otchestvo").textContent = "Отчество: " + localStorage.getItem('Отчество');;
+  document.getElementById("data").textContent = "Дата рождения: " + localStorage.getItem('Дата_рождения');;
+  document.getElementById("post").textContent = "Почта: " + localStorage.getItem('Email');;
+  document.getElementById("password").textContent = "Пароль: " + localStorage.getItem('Пароль');
+  document.getElementById("title").textContent = "Абонемент: " + localStorage.getItem('Название');
+});
+
+</script>
+</html>
