@@ -27,24 +27,33 @@
                 </defs>
                 </svg>
                 </a>
-                <h1>Регистрация</h1>
+                <h1>Вход</h1>
                 <div class="inputs">
-                    <input type="text" placeholder="Фамилия">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Отчество">
-                    <input type="date" placeholder="Дата_рождения">
+                    <input type="text" placeholder="Почта">
+                    <input type="password" placeholder="Пароль">
                 </div>
                 <div class="flex">
                     <span style="margin-top: 10px;font-weight: 400;
                     font-size: 15px;
                     text-align: center;
-                    color: #000;">Есть аккаунт? <a href="/vhod.html" style="color: #000;">Вход</a></span>
+                    color: #000;">Нет аккаунта? <a href="/login.html" style="color: #000;">Регистрация</a></span>
                 </div>
-                <a href="password.html" class="nextStage">Продолжить</a>
+                
+                <a href="verefyPasswor.html" class="nextStage" onclick="datas()">Продолжить</a>
         </div>
     </main>
 </body>
 <script>
+    function datas() {
+        localStorage.setItem('Фамилия', 'Ващекин')
+        localStorage.setItem('Отчество', 'Сергеевич')
+        localStorage.setItem('Дата_рождения', '23.12.2004')
+        localStorage.setItem('Название', 'СТАНДАРТНЫЙ')
+        localStorage.setItem('Время', 'Время посещения : 8.00 - 22.00')
+        localStorage.setItem('Набор', 'Тренажерный зал, сауна, зона отдыха	')
+        localStorage.setItem('Имя', 'Виктор')
+        localStorage.setItem('Цена', '2400руб/мес')
+    }
     // Получаем все элементы input
 const inputs = document.querySelectorAll('input');
 
