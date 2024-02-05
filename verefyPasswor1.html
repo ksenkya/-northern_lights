@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Личный кабинет - северное сияние</title>
+    <title>Введите код с почты</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
     <main>
         <div class="loginPls">
 
-            <a href="index.html" class="abs"><svg width="17" height="17" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <a href="profile.html" class="abs"><svg width="17" height="17" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="21" height="21" fill="url(#pattern0)"/>
                 <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -27,45 +27,64 @@
                 </defs>
                 </svg>
                 </a>
-                <h1>Вход</h1>
-                <div class="inputs">
-                    <input type="text" placeholder="Почта">
-                    <input type="password" placeholder="Пароль">
+                <h1>Введите код с почты</h1>
+                <div class="inputs ">
+                    <div class="blocksNums">
+                        <div>
+                            <p></p>
+                            <div class="bottomLine"></div>
+                        </div>
+                        <div>
+                            <p></p>
+                            <div class="bottomLine"></div>
+                        </div>
+                        <div>
+                            <p></p>
+                            <div class="bottomLine"></div>
+                        </div>
+                        <div>
+                            <p></p>
+                            <div class="bottomLine"></div>
+                        </div>
+                        <div>
+                            <p></p>
+                            <div class="bottomLine"></div>
+                        </div>
+                    </div>
+                    <input style="margin-top:0;" type="number" class="postEditD" placeholder="Старая почта">
                 </div>
-                <div class="flex">
-                    <span style="margin-top: 10px;font-weight: 400;
-                    font-size: 15px;
-                    text-align: center;
-                    color: #000;">Нет аккаунта? <a href="/login.html" style="color: #000;">Регистрация</a></span>
-                </div>
-                
-                <a href="verefyPasswor.html" class="nextStage" onclick="datas()">Продолжить</a>
+                <a href="profile.html" class="nextStage">Продолжить</a>
         </div>
     </main>
 </body>
 <script>
-    function datas() {
-        localStorage.setItem('Фамилия', 'Ващекин')
-        localStorage.setItem('Отчество', 'Сергеевич')
-        localStorage.setItem('Дата_рождения', '23.12.2004')
-        localStorage.setItem('Название', 'СТАНДАРТНЫЙ')
-        localStorage.setItem('Время', 'Время посещения : 8.00 - 22.00')
-        localStorage.setItem('Набор', 'Тренажерный зал, сауна, зона отдыха	')
-        localStorage.setItem('Имя', 'Виктор')
-        localStorage.setItem('Цена', '2400руб/мес')
-    }
-    // Получаем все элементы input
-const inputs = document.querySelectorAll('input');
+// Получаем все элементы <p> внутри .blocksNums
+    const paragraphs = document.querySelectorAll('.blocksNums p');
 
-// Добавляем обработчики для каждого input, и сохраняем их, если спросят куда, то в localstorage, типо берем значения и загружаем их
-inputs.forEach(input => {
-  input.addEventListener('input', (event) => {
-    const value = event.target.value;
-    const placeholder = event.target.placeholder;
-    localStorage.setItem(placeholder, value);
+// Получаем индекс выбранного абзаца
+let currentIndex = 0;
+
+// Добавляем обработчики для каждого элемента <p>
+paragraphs.forEach((paragraph, index) => {
+  paragraph.addEventListener('click', () => {
+    currentIndex = index; // Запоминаем текущий индекс при клике на абзац
   });
 });
 
+// Добавляем обработчик для ввода и удаления текста
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+
+  if (key === 'Backspace') {
+    if (currentIndex > 0) {
+      currentIndex--; // Переходим к предыдущему абзацу
+      paragraphs[currentIndex].textContent = ''; // Удаляем символ из выбранного абзаца
+    }
+  } else if (currentIndex < paragraphs.length && key.length === 1) {
+    paragraphs[currentIndex].textContent = key; // Вставляем символ в выбранный абзац
+    currentIndex++; // Переходим к следующему абзацу
+  }
+});
 
 </script>
 </html>

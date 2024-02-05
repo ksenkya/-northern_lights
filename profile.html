@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="div" style="margin-top: 10px;display: flex;
-            width: 100%; justify-content: flex-end;"><a style="background: none; outline: none; border: none; cursor: pointer; font-weight: 400;
+            width: 100%; justify-content: flex-end;"><button style="background: none; outline: none; border: none; cursor: pointer; font-weight: 400;
 font-size: 17px;
-color: #000;" onclick="localStorage.clear();" href='index.html'>выход</a></div>
+color: #000;" onclick="localStorage.clear(); window.location.href = '/'">выход</button></div>
         </div>
         <div class="private">
             <h1>Личные данные</h1>
@@ -69,14 +69,14 @@ color: #000;" onclick="localStorage.clear();" href='index.html'>выход</a></
   console.log(data)
   // Установить текстовое содержимое элемента каждого элемента на основе данных из локального хранилища
   //Короче тут мы в штуке, когда загружается страница, мы берем данные которые сохранили из полей ввода, и сертификатов в зал, и загружаем в профиль
-  document.getElementById('allData').textContent = `${localStorage.getItem('Фамилия')} ${localStorage.getItem('Имя')} ${localStorage.getItem('Отчество')}`
-  document.getElementById("surname").textContent = "Фамилия: " + localStorage.getItem('Фамилия');
-  document.getElementById("name").textContent = "Имя: " + localStorage.getItem('Имя');;
-  document.getElementById("otchestvo").textContent = "Отчество: " + localStorage.getItem('Отчество');;
-  document.getElementById("data").textContent = "Дата рождения: " + localStorage.getItem('Дата_рождения');;
-  document.getElementById("post").textContent = "Почта: " + localStorage.getItem('Email');;
-  document.getElementById("password").textContent = "Пароль: " + localStorage.getItem('Пароль');
-  document.getElementById("title").textContent = "Абонемент: " + localStorage.getItem('Название');
+  document.getElementById('allData').textContent = `${localStorage.getItem('Фамилия')||"Ващекин"} ${localStorage.getItem('Имя')||"Виктор"} ${localStorage.getItem('Отчество')||"Михайлович"}`
+  document.getElementById("surname").textContent = "Фамилия: " + (localStorage.getItem('Фамилия') || "Ващекин");
+  document.getElementById("name").textContent = "Имя: " + (localStorage.getItem('Имя')|| "Виктор");
+  document.getElementById("otchestvo").textContent = "Отчество: " + (localStorage.getItem('Отчество')||"Михайлович");
+  document.getElementById("data").textContent = "Дата рождения: " + (localStorage.getItem('Дата_рождения')||"09.12.2005");
+  document.getElementById("post").textContent = "Почта: " + (localStorage.getItem('Email')|| 'victor@mail.com');
+  document.getElementById("password").textContent = "Пароль: " + (localStorage.getItem('Пароль')||"123232");
+  document.getElementById("title").textContent = "Абонемент: " + (localStorage.getItem('Название')||"Детский");
 });
 
 </script>
